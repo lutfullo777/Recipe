@@ -12,6 +12,11 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .App-header {
   background-color: #282c34;
@@ -35,4 +40,89 @@
   to {
     transform: rotate(360deg);
   }
+}
+#root{
+  height: 100vh;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.register{
+  margin-top: 0px;
+  background-color: pink;
+  width: 40%;
+  height: 90vh;
+  justify-content: space-around;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.registerme{
+  width: 100%;
+}
+.registerme h1{
+  margin: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.registerme input{
+  width: 100%;
+  display: flex;
+  margin: 15px 0 15px 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: white;
+  border: none;
+  font-size: 1.2em;
+  outline: none;
+  padding: 5px;
+}
+.registerme p{
+  margin: 15px auto 15px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  padding-right: 15px;
+  border-radius: 5px;
+  background-color: white;
+}
+.fa-at,.fa-key,.fa-user{
+ color: rgb(71, 66, 66); 
+}
+.buttons{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons button{
+  height: 40px;
+  width: 25%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(248, 131, 63);
+  cursor: pointer;
+  font-size: 1.2em;
+  color: white;
+}
+.buttons button:hover{
+  background-color: rgb(230, 97, 21);
+}
+ a{
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+@media  (max-width:700px){
+.register{
+  width:80%;
+}
 }
