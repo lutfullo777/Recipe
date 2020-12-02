@@ -10,7 +10,6 @@ class SignIn extends Component{
     render(){
         return(
             <div className="registerme">
-                <h1>Sign up</h1>
                 <form>
                     <p>
                         <input type="email" placeholder="Enter email" defaultValue=""/>

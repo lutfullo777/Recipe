@@ -1,71 +1,65 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 #root{
-  height: 100vh;
+  min-height: 100vh;
   background-color: blueviolet;
+  box-sizing: border-box;
+}
+.head{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(80, 77, 77);
+}
+.head .fa-times{
+  font-size: 1.2em;
+  width: 40px;
+  cursor: pointer;
+  color: rgb(80, 77, 77);
+}
+nav{
+  height: 15vh;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(100, 141, 155);
+  color: white;
+}
+.nav-links{
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.registr{
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .register{
-  margin-top: 0px;
+  position: absolute;
   background-color: pink;
   width: 40%;
-  height: 90vh;
-  justify-content: space-around;
+  height: 85vh;
+  top: 7.5%;
+  left: 30%;
   border-radius: 8px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .registerme{
   width: 100%;
 }
-.registerme h1{
-  margin: 30px;
-  display: flex;
-  justify-content: space-around;
-}
+
 .registerme input{
   width: 100%;
   display: flex;
@@ -76,7 +70,7 @@
   border: none;
   font-size: 1.2em;
   outline: none;
-  padding: 5px;
+  padding-left: 5px;
 }
 .registerme p{
   margin: 15px auto 15px auto;
@@ -123,6 +117,66 @@ a:hover{
 }
 @media  (max-width:700px){
 .register{
+  left: 10%;
   width:80%;
 }
+}
+.foods{
+  text-align: center;
+}
+.foods-recipe{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.food-recipe{
+  background-color: cadetblue;
+  width: 400px;
+  min-height:700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+  color: white;
+  padding: 10px;
+}
+.food-recipe ol{
+  list-style: none;
+}
+.food-recipe img{
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.foods form{
+  width: 40%;
+  height: 40px;
+  margin: 20px auto;
+  display: flex;
+  box-sizing: border-box;
+}
+.foods form input{
+  width: 80%;
+  height: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  padding: 5px;
+}
+.foods form button{
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 100%;
+  width: 80px;
+  outline: none;
+  background-color: greenyellow;
+  font-size: 1.2em;
+  border: none;
 }
