@@ -1,26 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-#root{
+#root {
   min-height: 100vh;
-  background-color: blueviolet;
+  background-color: #fff;
   box-sizing: border-box;
 }
-.head{
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: rgb(80, 77, 77);
-}
-.head .fa-times{
-  font-size: 1.2em;
-  width: 40px;
-  cursor: pointer;
-  color: rgb(80, 77, 77);
-}
-nav{
+
+nav {
   height: 15vh;
   width: 100%;
   display: flex;
@@ -29,154 +17,125 @@ nav{
   background-color: rgb(100, 141, 155);
   color: white;
 }
-.nav-links{
-  display: flex;
-  width: 40%;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-}
-.registr{
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.register{
-  position: absolute;
-  background-color: pink;
-  width: 40%;
-  height: 85vh;
-  top: 7.5%;
-  left: 30%;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.registerme{
+.foods {
   width: 100%;
 }
-
-.registerme input{
-  width: 100%;
-  display: flex;
-  margin: 15px 0 15px 0;
-  height: 100%;
-  border-radius: 5px;
-  background-color: white;
-  border: none;
-  font-size: 1.2em;
-  outline: none;
-  padding-left: 5px;
-}
-.registerme p{
-  margin: 15px auto 15px auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 90%;
-  height: 50px;
-  padding-right: 15px;
-  border-radius: 5px;
-  background-color: white;
-}
-.fa-at,.fa-key,.fa-user{
- color: rgb(71, 66, 66); 
-}
-.buttons{
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.buttons button{
-  height: 40px;
-  width: 25%;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  background-color: rgb(248, 131, 63);
-  cursor: pointer;
-  font-size: 1.2em;
-  color: white;
-}
-.buttons button:hover{
-  background-color: rgb(230, 97, 21);
-}
- a{
-  cursor: pointer;
-  color: blue;
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: underline;
-}
-@media  (max-width:700px){
-.register{
-  left: 10%;
-  width:80%;
-}
-}
-.foods{
-  text-align: center;
-}
-.foods-recipe{
-  text-align: center;
+.foods-recipe {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: left;
+  margin: auto;
+  width: 95%;
+  justify-content: space-evenly;
   box-sizing: border-box;
 }
-.food-recipe{
+.food-recipe {
   background-color: cadetblue;
   width: 400px;
-  min-height:700px;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
   color: white;
-  padding: 10px;
+  position: relative;
 }
-.food-recipe ol{
-  list-style: none;
+
+.food-recipe h2,
+p {
+  margin-left: 20px;
 }
-.food-recipe img{
+.food-recipe:hover .recepi-active {
+  display: flex;
+}
+.recepi-active {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  padding: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.recepi-active h2 {
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid rgb(100, 141, 155);
+  margin: 10px 0;
+  position: relative;
+  /* background-color: rgb(100, 141, 155); */
+}
+.recepi-active h2:hover {
+  background-color: rgb(100, 141, 155);
+  transition: 0.3s;
+}
+
+.food-recipe ol li {
+  margin-left: 30px;
+}
+.food-recipe img {
   width: 60%;
-  margin: 0 auto;
+  margin: 10px auto;
   border-radius: 10px;
 }
-.foods form{
+.foods form {
   width: 40%;
   height: 40px;
+  border: 2px solid rgb(100, 141, 155);
+  border-radius: 10px;
   margin: 20px auto;
   display: flex;
   box-sizing: border-box;
 }
-.foods form input{
+.foods form input {
   width: 80%;
   height: 100%;
   box-sizing: border-box;
   outline: none;
   border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   font-size: 1.2em;
   padding: 5px;
 }
-.foods form button{
+.foods form button {
   cursor: pointer;
   box-sizing: border-box;
   height: 100%;
-  width: 80px;
+  width: 20%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   outline: none;
-  background-color: greenyellow;
+  background-color: rgb(100, 141, 155);
+  color: #fff;
   font-size: 1.2em;
   border: none;
+  transition: 0.3s;
+}
+.foods form button:hover {
+  background-color: rgb(113, 186, 211);
+}
+
+@media (max-width: 1200px) {
+  .food-recipe {
+    width: 45%;
+  }
+  .foods form {
+    width: 70%;
+  }
+}
+@media (max-width: 700px) {
+  .food-recipe {
+    width: 100%;
+  }
+  .foods form {
+    width: 90%;
+  }
 }
