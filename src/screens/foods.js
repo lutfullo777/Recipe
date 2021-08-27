@@ -8,7 +8,7 @@ const Foods = () => {
     const MY_ID = '813584d1';
     const MY_KEY = 'aad4d757c4f3a4e1fdd7f45312703076';
 
-    const {err,loading} = useSelector(state=>state.addBasketRed);
+    const {loading} = useSelector(state=>state.addBasketRed);
 
     const getRequest = async () => {
         const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${MY_ID}&app_key=${MY_KEY}`);
