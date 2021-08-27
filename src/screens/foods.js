@@ -10,17 +10,18 @@ const Foods = () => {
 
     const {loading} = useSelector(state=>state.addBasketRed);
 
-    const getRequest = async () => {
-        const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${MY_ID}&app_key=${MY_KEY}`);
-        const date = await response.json();
-        setRecepis(date.hits);
-    }
+    
 
     const [recepi, setRecepis] = useState([]);
     const [search, setSearch] = useState('');
     const [query, setQuery] = useState("chicken");
 
     useEffect(() => {
+        const getRequest = async () => {
+            const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${MY_ID}&app_key=${MY_KEY}`);
+            const date = await response.json();
+            setRecepis(date.hits);
+        }
         getRequest();
     }, [query]);
 
