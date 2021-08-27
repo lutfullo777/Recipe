@@ -1,6 +1,6 @@
 import React from "react";
 import { FaShoppingBasket } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addBasket } from "../redux/actions";
 
 function Food({ recepi }) {
