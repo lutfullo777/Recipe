@@ -1,128 +1,141 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-*{
+* {
   margin: 0;
   padding: 0;
+}
+#root {
+  min-height: 100vh;
+  background-color: #fff;
   box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  height: 15vh;
+  width: 100%;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(100, 141, 155);
+  color: white;
+}
+.foods {
+  width: 100%;
+}
+.foods-recipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: auto;
+  width: 95%;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+.food-recipe {
+  background-color: cadetblue;
+  width: 400px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  color: white;
+  position: relative;
+}
+
+.food-recipe h2,
+p {
+  margin-left: 20px;
+}
+.food-recipe:hover .recepi-active {
+  display: flex;
+}
+.recepi-active {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  padding: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  color: #fff;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.recepi-active h2 {
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid rgb(100, 141, 155);
+  margin: 10px 0;
+  position: relative;
+  /* background-color: rgb(100, 141, 155); */
+}
+.recepi-active h2:hover {
+  background-color: rgb(100, 141, 155);
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.food-recipe ol li {
+  margin-left: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.food-recipe img {
+  width: 60%;
+  margin: 10px auto;
+  border-radius: 10px;
 }
-#root{
-  height: 100vh;
-  background-color: blueviolet;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.register{
-  margin-top: 0px;
-  background-color: pink;
+.foods form {
   width: 40%;
-  height: 90vh;
-  justify-content: space-around;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.registerme{
-  width: 100%;
-}
-.registerme h1{
-  margin: 30px;
+  height: 40px;
+  border: 2px solid rgb(100, 141, 155);
+  border-radius: 10px;
+  margin: 20px auto;
   display: flex;
-  justify-content: space-around;
+  box-sizing: border-box;
 }
-.registerme input{
-  width: 100%;
-  display: flex;
-  margin: 15px 0 15px 0;
+.foods form input {
+  width: 80%;
   height: 100%;
-  border-radius: 5px;
-  background-color: white;
-  border: none;
-  font-size: 1.2em;
+  box-sizing: border-box;
   outline: none;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 1.2em;
   padding: 5px;
 }
-.registerme p{
-  margin: 15px auto 15px auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 90%;
-  height: 50px;
-  padding-right: 15px;
-  border-radius: 5px;
-  background-color: white;
-}
-.fa-at,.fa-key,.fa-user{
- color: rgb(71, 66, 66); 
-}
-.buttons{
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.buttons button{
-  height: 40px;
-  width: 25%;
-  border: none;
+.foods form button {
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 100%;
+  width: 20%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   outline: none;
-  border-radius: 5px;
-  background-color: rgb(248, 131, 63);
-  cursor: pointer;
+  background-color: rgb(100, 141, 155);
+  color: #fff;
   font-size: 1.2em;
-  color: white;
+  border: none;
+  transition: 0.3s;
 }
-.buttons button:hover{
-  background-color: rgb(230, 97, 21);
+.foods form button:hover {
+  background-color: rgb(113, 186, 211);
 }
- a{
-  cursor: pointer;
-  color: blue;
-  text-decoration: none;
+
+@media (max-width: 1200px) {
+  .food-recipe {
+    width: 45%;
+  }
+  .foods form {
+    width: 70%;
+  }
 }
-a:hover{
-  text-decoration: underline;
-}
-@media  (max-width:700px){
-.register{
-  width:80%;
-}
+@media (max-width: 700px) {
+  .food-recipe {
+    width: 100%;
+  }
+  .foods form {
+    width: 90%;
+  }
 }
